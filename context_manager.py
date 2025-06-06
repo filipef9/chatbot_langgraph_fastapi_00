@@ -1,5 +1,5 @@
 from tiktoken import encoding_for_model
-from langchain.graph import BaseMessage
+from langchain.graph.message import BaseMessage
 
 def count_tokens(messages: list[BaseMessage]) -> int:
   encoding = encoding_for_model("gpt-3.5-turbo")
