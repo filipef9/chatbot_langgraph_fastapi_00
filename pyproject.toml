@@ -14,6 +14,7 @@ langgraph = "*"
 langchain = "*"
 langchain-groq = "*"
 tiktoken = "*"
+websockets = "^15.0.1"
 
 [build-system]
 requires = ["poetry-core"]
