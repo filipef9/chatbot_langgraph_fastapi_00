@@ -10,4 +10,4 @@ prompt_template = ChatPromptTemplate.from_messages(
   ]
 )
 
-chain = prompt_template | llm
+llm_model = prompt_template | llm
