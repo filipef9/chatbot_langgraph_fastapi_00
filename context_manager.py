@@ -1,5 +1,5 @@
 from tiktoken import encoding_for_model
-from langchain.graph.message import BaseMessage
+from langgraph.graph.message import BaseMessage
 
 def count_tokens(messages: list[BaseMessage]) -> int:
   encoding = encoding_for_model("gpt-3.5-turbo")
@@ -28,8 +28,7 @@ def trim_messages(messages: list[BaseMessage], max_tokens: int = 4000) -> list[B
   if system_message:
     chat_messages.insert(0, system_message)
 
-  for message in chat
-messages:
+  for message in chat_messages:
     print(message)
     
   return chat_messages
