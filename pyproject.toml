@@ -1,0 +1,20 @@
+
+[tool.poetry]
+name = "fastapi-chatbot"
+version = "0.1.0"
+description = "FastAPI chatbot with LangGraph"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "*"
+uvicorn = "*"
+python-dotenv = "*"
+langgraph = "*"
+langchain = "*"
+langchain-groq = "*"
+tiktoken = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
