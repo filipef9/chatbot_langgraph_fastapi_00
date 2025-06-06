@@ -3,6 +3,8 @@
 
 Um chatbot inteligente construído com FastAPI, LangGraph e Groq LLM, com suporte a WebSocket para comunicação em tempo real.
 
+Tutorial: [Deploying LangGraph with FastAPI: A Step-by-Step Tutorial](https://medium.com/@sajith_k/deploying-langgraph-with-fastapi-a-step-by-step-tutorial-b5b7cdc91385)
+
 ## 📋 Funcionalidades
 
 - **Chat em tempo real** via WebSocket
@@ -145,14 +147,6 @@ state["messages"] = trim_messages(state["messages"], max_tokens=8000)
 
 ## 🐛 Solução de Problemas
 
-### Erro de WebSocket em HTTPS
-
-Se estiver usando HTTPS, altere no `template.py`:
-
-```javascript
-var ws = new WebSocket('wss://' + window.location.hostname + '/ws/123');
-```
-
 ### Erro de API Key
 
 Certifique-se de que a variável `GROQ_API_KEY` está configurada:
@@ -168,38 +162,3 @@ Reinstale as dependências:
 ```bash
 poetry install --no-cache
 ```
-
-## 📈 Melhorias Futuras
-
-- [ ] Autenticação de usuários
-- [ ] Histórico persistente em banco de dados
-- [ ] Suporte a múltiplos modelos LLM
-- [ ] Interface web mais avançada
-- [ ] Métricas e logging
-- [ ] Rate limiting
-- [ ] Suporte a arquivos/imagens
-
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 🆘 Suporte
-
-Se você encontrar algum problema ou tiver dúvidas:
-
-1. Verifique os logs do servidor
-2. Consulte a documentação do [FastAPI](https://fastapi.tiangolo.com/)
-3. Consulte a documentação do [LangGraph](https://langchain-ai.github.io/langgraph/)
-4. Abra uma issue neste repositório
-
----
-
-Feito com ❤️ usando FastAPI e LangGraph
