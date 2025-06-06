@@ -2,6 +2,19 @@ modules = ["python-base-3.12"]
 run = "uvicorn main:app --reload"
 [nix]
 channel = "stable-24_05"
+packages = ["bash", "cargo", "libiconv", "libxcrypt", "rustc"]
 
 [deployment]
-run = ["sh", "-c", "uvicorn main:app --reload"]
+run = ["sh", "-c", "uvicornmain:app --reload"]
+
+[workflows]
+runButton = "Run FastAPI App"
+
+[[workflows.workflow]]
+name = "Run FastAPI App"
+author = 17700792
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "uvicorn main:app --host 0.0.0.0 --port 5000 --reload"
